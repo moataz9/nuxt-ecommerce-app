@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "name": "VINTER 2020 WINTER 2020",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 67763.23,
+      "currency": "$"
+    },
+    "discountPercentage": 12,
+    "image": "/images/discouts/vinter.png"
+  },
+  {
+    "id": 2,
+    "name": "GLASIG GLASIG",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 7763.23,
+      "currency": "$"
+    },
+    "discountPercentage": 12,
+    "image": "/images/discouts/glasic.png"
+  },
+  {
+    "id": 3,
+    "name": "STABBIG STABIG",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 763.23,
+      "currency": "$"
+    },
+    "discountPercentage": 12,
+    "image": "/images/discouts/stabbig.png"
+  },
+  {
+    "id": 4,
+    "name": "PÄRLBAND PERLBAND",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 63.23,
+      "currency": "$"
+    },
+    "discountPercentage": 12,
+    "image": "/images/discouts/perlband.png"
+  },
+  {
+    "id": 5,
+    "name": "BRIMNES BRIMNES",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 63.23,
+      "currency": "$"
+    },
+    "discountPercentage": 0,
+    "image": "/images/categories/brimnes.png"
+  },
+  {
+    "id": 6,
+    "name": "DEKORERA DECORERA",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 63.23,
+      "currency": "$"
+    },
+    "discountPercentage": 0,
+    "image": "/images/categories/decorera.png"
+  },
+  {
+    "id": 7,
+    "name": "FULLTALIG FULLTALIG",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 63.23,
+      "currency": "$"
+    },
+    "discountPercentage": 12,
+    "image": "/images/categories/fulltalig.png"
+  },
+  {
+    "id": 8,
+    "name": "GLASIG GLASIG",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 63.23,
+      "currency": "$"
+    },
+    "discountPercentage": 0,
+    "image": "/images/categories/glisig.png"
+  },
+  {
+    "id": 9,
+    "name": "KINNEN KINNEN",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 63.23,
+      "currency": "$"
+    },
+    "discountPercentage": 0,
+    "image": "/images/categories/kinnen.png"
+  },
+  {
+    "id": 10,
+    "name": "BORRBY BORBYU",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 63.23,
+      "currency": "$"
+    },
+    "discountPercentage": 33,
+    "image": "/images/categories/burrby.png"
+  },
+  {
+    "id": 11,
+    "name": "SKURUP SCRUP",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 63.23,
+      "currency": "$"
+    },
+    "discountPercentage": 0,
+    "image": "/images/categories/skurup.png"
+  },
+  {
+    "id": 12,
+    "name": "MOSSRUTA MOSSRUTA",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 63.23,
+      "currency": "$"
+    },
+    "discountPercentage": 0,
+    "image": "/images/categories/mossruta.png"
+  },
+  {
+    "id": 13,
+    "name": "VINTER 2020 WINTER 2020",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 63.23,
+      "currency": "$"
+    },
+    "discountPercentage": 0,
+    "image": "/images/categories/winter-2.png"
+  },
+  {
+    "id": 14,
+    "name": "GLASIG GLASIG",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 63.23,
+      "currency": "$"
+    },
+    "discountPercentage": 0,
+    "image": "/images/categories/storage-orders.png"
+  },
+  {
+    "id": 15,
+    "name": "STABBIG STABIG",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 63.23,
+      "currency": "$"
+    },
+    "discountPercentage": 0,
+    "image": "/images/categories/stabbig-1.png"
+  },
+  {
+    "id": 16,
+    "name": "PÄRLBAND PERLBAND",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 63.23,
+      "currency": "$"
+    },
+    "discountPercentage": 0,
+    "image": "/images/categories/perland-2.png"
+  }
+]

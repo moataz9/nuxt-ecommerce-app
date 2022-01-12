@@ -1,0 +1,21 @@
+// Custom Bootstrap variable overrides go first
+$grid-breakpoints: (
+  xs: 0,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1280px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1280px,
+);
+
+$app-color: #FF9900 !default;
+$bg-color: #F8F8F8 !default;
+$app-shadow: inset 0px 0px 10px rgba(#000, 0.05);

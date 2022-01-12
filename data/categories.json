@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "name": "Sofas",
+    "image": "/images/categories/sofas.png"
+  },
+  {
+    "id": 2,
+    "name": "Sleeping",
+    "image": "/images/categories/sleeping.png"
+  },
+  {
+    "id": 3,
+    "name": "Kitchen",
+    "image": "/images/categories/kitchen.png"
+  },
+  {
+    "id": 4,
+    "name": "For garden",
+    "image": "/images/categories/for-garden.png"
+  },
+  {
+    "id": 5,
+    "name": "Furniture",
+    "image": "/images/categories/furniture.png"
+  },
+  {
+    "id": 6,
+    "name": "Hygiene",
+    "image": "/images/categories/hygiene.png"
+  },
+  {
+    "id": 7,
+    "name": "Leisure goods",
+    "image": "/images/categories/sports.png"
+  },
+  {
+    "id": 8,
+    "name": "Mirrors",
+    "image": "/images/categories/mirrors.png"
+  },
+  {
+    "id": 9,
+    "name": "Storage and order",
+    "image": "/images/categories/storage-orders.png"
+  },
+  {
+    "id": 10,
+    "name": "Kitchen and household appliances.",
+    "image": "/images/categories/houshold-appliance.png"
+  }
+]
+
+
+
+
+
+
+
+
+
