@@ -1,6 +1,5 @@
 <template>
   <div>
-    <MainSearch />
     <AppSidebar />
     <!-- <img src="/images/image.jpg" alt="" /> -->
     <div class="container-xxl">
