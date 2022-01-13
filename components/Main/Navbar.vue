@@ -8,10 +8,11 @@
       </b-navbar-brand>
 
       <b-navbar-nav class="ml-auto">
-        <b-nav-item href="#">Catalog</b-nav-item>
-        <b-nav-item href="#">Delivery</b-nav-item>
-        <b-nav-item href="#">Conditions</b-nav-item>
-        <b-nav-item href="#">Contacts</b-nav-item>
+        <b-nav-item v-for="(link, index) in navbarLinks" :key="index">
+          <nuxt-link :to="{ name: link.routeName }">
+            {{ link.linkName }}
+          </nuxt-link>
+        </b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -26,7 +27,18 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      navbarLinks: [
+        { routeName: 'catalog', linkName: 'Catalog' },
+        { routeName: 'delivery', linkName: 'Delivery' },
+        { routeName: 'conditions', linkName: 'Conditions' },
+        { routeName: 'contacts', linkName: 'Contacts' },
+      ],
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -47,9 +59,12 @@ $third-font-color: #dcdcdc;
   }
 }
 .nav-link {
-  color: #000 !important;
-  &:hover {
+  a {
     color: #000 !important;
+    &:hover {
+      color: #000 !important;
+      text-decoration: none;
+    }
   }
 }
 </style>
