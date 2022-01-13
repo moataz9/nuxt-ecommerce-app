@@ -1,17 +1,17 @@
 <template>
-  <div class="item rounded-30 p-4 h-100">
-    <div class="item-img">
+  <div class="item rounded-30 py-4 h-100">
+    <div class="item-img px-1">
       <img :src="imagePath" :alt="itemName" />
     </div>
 
-    <div class="item-info">
+    <div class="item-info px-4">
       <p v-if="discount" class="item-info_discount m-0">{{ discount }}%</p>
       <br v-else />
       <h5 class="item-info_name">{{ itemName }}</h5>
       <h6 class="item-info_desc">{{ description }}</h6>
     </div>
 
-    <div class="item-pricing">
+    <div class="item-pricing px-4">
       <p v-if="discount" class="item-pricing_old">
         <s> {{ price.toFixed(2) }} {{ currency }} </s>
       </p>
@@ -21,7 +21,7 @@
       </p>
     </div>
 
-    <div class="item-cart">
+    <div class="item-cart px-4">
       <b-form-select
         v-model="selectedItem"
         :options="options"
@@ -140,11 +140,10 @@ $app-color: #ff9900 !default;
     }
   }
   &-cart {
-    // background-color: #0dd;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: -0.6rem;
+    // margin-top: -0.6rem;
     transform: translateY(155%);
     transition: transform 0.5s ease;
     &_select {
