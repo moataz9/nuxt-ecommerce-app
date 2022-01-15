@@ -1,53 +1,55 @@
 <template>
   <div
-    class="container-xxl py-4 d-flex justify-content-between align-items-center"
+    class="container-xxl py-4"
   >
-    <div>
-      <img
-        v-b-toggle.app-sidebar
-        src="/icons/hamburger.svg"
-        alt="humburger-icon"
-      />
-    </div>
+    <b-container fluid class="d-flex justify-content-between align-items-center">
+      <div>
+        <img
+          v-b-toggle.app-sidebar
+          src="/icons/hamburger.svg"
+          alt="humburger-icon"
+        />
+      </div>
 
-    <b-form class="w-50 search">
-      <button class="search-btn">
-        <img src="/icons/search.svg" alt="search" />
-      </button>
-      <b-form-input
-        class="custom-form-control px-5"
-        v-model="search"
-        placeholder="What do you want to find?"
-      />
-    </b-form>
+      <b-form class="w-50 search">
+        <button class="search-btn">
+          <img src="/icons/search.svg" alt="search" />
+        </button>
+        <b-form-input
+          class="custom-form-control px-5"
+          v-model="search"
+          placeholder="What do you want to find?"
+        />
+      </b-form>
 
-    <div>
-      <nuxt-link class="app-color font-size-18" :to="{ name: 'index' }">
-        insert shopping list
-      </nuxt-link>
-    </div>
+      <div>
+        <nuxt-link class="app-color font-size-18" :to="{ name: 'index' }">
+          insert shopping list
+        </nuxt-link>
+      </div>
 
-    <ul class="icons mb-0">
-      <!-- popular products -->
-      <li>
-        <nuxt-link :to="{ name: 'popular' }">
-          <img src="/icons/star.svg" alt="star" />
-        </nuxt-link>
-      </li>
-      <!-- in cart -->
-      <li class="cart">
-        <nuxt-link :to="{ name: 'cart' }">
-          <span class="cart-count app-color">{{ checkCartCount() }}</span>
-          <img src="/icons/cart.svg" alt="cart" />
-        </nuxt-link>
-      </li>
-      <!-- user login -->
-      <li>
-        <nuxt-link :to="{ name: 'login' }">
-          <img src="/icons/user.svg" alt="user" />
-        </nuxt-link>
-      </li>
-    </ul>
+      <ul class="icons mb-0">
+        <!-- popular products -->
+        <li>
+          <nuxt-link :to="{ name: 'popular' }">
+            <img src="/icons/star.svg" alt="star" />
+          </nuxt-link>
+        </li>
+        <!-- in cart -->
+        <li class="cart">
+          <nuxt-link :to="{ name: 'cart' }">
+            <span class="cart-count app-color">{{ checkCartCount() }}</span>
+            <img src="/icons/cart.svg" alt="cart" />
+          </nuxt-link>
+        </li>
+        <!-- user login -->
+        <li>
+          <nuxt-link :to="{ name: 'login' }">
+            <img src="/icons/user.svg" alt="user" />
+          </nuxt-link>
+        </li>
+      </ul>
+    </b-container>
   </div>
 </template>
 

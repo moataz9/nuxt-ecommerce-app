@@ -6,7 +6,6 @@
 body {
   font-family: 'Roboto Slab', serif;
   font-size: 18px !important;
-  height: 6000px;
 }
 
 .text-black {
@@ -75,4 +74,13 @@ a.app-color:hover {
   left: 100%;
   top: 0;
   z-index: -100;
+}
+
+a {
+  color: #000;
+  transition: color .1s ease-in-out;
+  &:hover {
+    text-decoration: none !important;
+    color: $app-color;
+  }
 }

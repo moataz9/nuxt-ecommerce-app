@@ -2,6 +2,7 @@
   <div>
     <MainNavbar />
     <MainSearch />
+    <AppSidebar />
     <Nuxt />
     <MainFooter />
   </div>

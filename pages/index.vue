@@ -1,6 +1,5 @@
 <template>
   <div>
-    <AppSidebar />
     <!-- <img src="/images/image.jpg" alt="" /> -->
     <div class="container-xxl">
       <b-container fluid>

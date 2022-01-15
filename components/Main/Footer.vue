@@ -36,7 +36,10 @@
                   :key="index"
                   class="footer-links_link"
                 >
-                  <nuxt-link :to="{ name: linkInfo.routeName }">
+                  <nuxt-link
+                    class="text-decoration-none"
+                    :to="{ name: linkInfo.routeName }"
+                  >
                     {{ linkInfo.name }}
                   </nuxt-link>
                 </li>
@@ -60,13 +63,21 @@
                 <a href="tel:+"> + 375 448 473 09 48 </a>
               </li>
               <li class="mt-5">
-                <a href="mailto:#"> ikeaekspress@gmail.com </a>
+                <a
+                  href="mailto:moatazsamir9.in.khir99@gmail.com"
+                  class="text-decoration-none"
+                  title="real email to contact moataz"
+                >
+                  moatazsamir9.in.khir99@gmail.com
+                </a>
               </li>
             </ul>
           </b-col>
           <!--  -->
           <b-col>
-            <ul class="list-unstyled pl-0 d-flex justify-content-end flex-column h-100">
+            <ul
+              class="list-unstyled pl-0 d-flex justify-content-end flex-column h-100"
+            >
               <li class="my-3">
                 <b-img src="/images/social/instegram.png"></b-img>
               </li>
@@ -86,7 +97,7 @@ export default {
         [
           { routeName: 'index', name: 'Home' },
           { routeName: 'catalog', name: 'Catalog' },
-          { routeName: 'in-stock', name: 'Products in stock' },
+          { routeName: 'in_stock', name: 'Products in stock' },
         ],
         [
           { routeName: 'discounts', name: 'Discounts' },
@@ -101,7 +112,7 @@ export default {
         [
           { routeName: 'contacts', name: 'Contacts' },
           { routeName: 'insert', name: 'Insert' },
-          { routeName: 'shoping-list', name: 'Shopping List' },
+          { routeName: 'shoping_list', name: 'Shopping List' },
         ],
         [
           { routeName: 'cart', name: 'Cart' },
@@ -115,7 +126,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$app-color: #FF9900 !default;
+$app-color: #ff9900 !default;
 
 .footer {
   &-title {
@@ -136,14 +147,6 @@ $app-color: #FF9900 !default;
         border-right: 1px solid #ccc;
         padding-right: 5px;
         margin-right: 5px;
-      }
-      a {
-        color: #000;
-        text-decoration: none;
-        transition: color .1s ease-in-out;
-        &:hover {
-          color: $app-color;
-        }
       }
     }
   }

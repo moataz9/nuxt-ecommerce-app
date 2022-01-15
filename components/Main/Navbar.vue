@@ -1,27 +1,29 @@
 <template>
   <div class="app-bg-color">
     <b-navbar toggleable="md" class="container-xxl py-4">
-      <b-navbar-brand class="mr-0">
-        <nuxt-link :to="{ name: 'index' }">
-          <b-img src="/images/logo.svg" />
-        </nuxt-link>
-      </b-navbar-brand>
-
-      <b-navbar-nav class="ml-auto">
-        <b-nav-item v-for="(link, index) in navbarLinks" :key="index">
-          <nuxt-link :to="{ name: link.routeName }">
-            {{ link.linkName }}
+      <b-container fluid>
+        <b-navbar-brand class="mr-0">
+          <nuxt-link :to="{ name: 'index' }">
+            <b-img src="/images/logo.svg" />
           </nuxt-link>
-        </b-nav-item>
-      </b-navbar-nav>
+        </b-navbar-brand>
 
-      <!-- Right aligned nav items -->
-      <b-navbar-nav class="ml-auto">
-        <div class="text-black call-request font-size-22">
-          + 20 102 456 7890 <span>/</span> + 20 102 456 7890
-          <p class="text-right mb-0">Request a call</p>
-        </div>
-      </b-navbar-nav>
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item v-for="(link, index) in navbarLinks" :key="index">
+            <nuxt-link :to="{ name: link.routeName }">
+              {{ link.linkName }}
+            </nuxt-link>
+          </b-nav-item>
+        </b-navbar-nav>
+
+        <!-- Right aligned nav items -->
+        <b-navbar-nav class="ml-auto">
+          <div class="text-black call-request font-size-22">
+            + 20 102 456 7890 <span>/</span> + 20 102 456 7890
+            <p class="text-right mb-0">Request a call</p>
+          </div>
+        </b-navbar-nav>
+      </b-container>
     </b-navbar>
   </div>
 </template>

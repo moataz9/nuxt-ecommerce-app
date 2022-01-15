@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1,
+    "name": "Furniture",
+    "image": "/images/catalog/furniture-catalog.png",
+    "categories": [
+      {
+        "categoryId": 1,
+        "categoryName": "Wardrobes and wardrobes"
+      },
+      {
+        "categoryId": 2,
+        "categoryName": "Shelving and bookcases"
+      },
+      {
+        "categoryId": 3,
+        "categoryName": "Tables"
+      },
+      {
+        "categoryId": 4,
+        "categoryName": "Chairs"
+      },
+      {
+        "categoryId": 5,
+        "categoryName": "Beds"
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "name": "Accessories to create coziness",
+    "image": "/images/catalog/coziness-accessories-catalog.png",
+    "categories": [
+      {
+        "categoryId": 1,
+        "categoryName": "Linens"
+      },
+      {
+        "categoryId": 2,
+        "categoryName": "Blankets"
+      },
+      {
+        "categoryId": 3,
+        "categoryName": "Bedding sets"
+      },
+      {
+        "categoryId": 4,
+        "categoryName": "Cushions"
+      },
+      {
+        "categoryId": 5,
+        "categoryName": "Blankets"
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "name": "Storage and order",
+    "image": "/images/catalog/storage-orders-catalog.png",
+    "categories": [
+      {
+        "categoryId": 1,
+        "categoryName": "Storage accessories"
+      },
+      {
+        "categoryId": 2,
+        "categoryName": "Wall hooks and shelves"
+      },
+      {
+        "categoryId": 3,
+        "categoryName": "shoe racks, shelves with hooks for storage"
+      },
+      {
+        "categoryId": 4,
+        "categoryName": "Hangers, shoe racks, shelves with hooks for storage"
+      },
+      {
+        "categoryId": 5,
+        "categoryName": "Storage systems"
+      },
+      {
+        "categoryId": 6,
+        "categoryName": "Wardrobes and wardrobes"
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "name": "Accessories",
+    "image": "/images/catalog/accessories-catalog.png",
+    "categories": [
+      {
+        "categoryId": 1,
+        "categoryName": "Wardrobes and wardrobes"
+      },
+      {
+        "categoryId": 2,
+        "categoryName": "Shelving and bookcases"
+      },
+      {
+        "categoryId": 3,
+        "categoryName": "Tables"
+      },
+      {
+        "categoryId": 4,
+        "categoryName": "Chairs"
+      },
+      {
+        "categoryId": 5,
+        "categoryName": "Beds"
+      }
+    ]
+  },
+
+  {
+    "id": 5,
+    "name": "Furniture",
+    "image": "/images/catalog/furniture-2-catalog.png",
+    "categories": [
+      {
+        "categoryId": 1,
+        "categoryName": "Wardrobes and wardrobes"
+      },
+      {
+        "categoryId": 2,
+        "categoryName": "Shelving and bookcases"
+      },
+      {
+        "categoryId": 3,
+        "categoryName": "Tables"
+      },
+      {
+        "categoryId": 4,
+        "categoryName": "Chairs"
+      },
+      {
+        "categoryId": 5,
+        "categoryName": "Beds"
+      }
+    ]
+  },
+
+  {
+    "id": 6,
+    "name": "Accessories to create coziness",
+    "image": "/images/catalog/accressories-2-catalog.png",
+    "categories": [
+      {
+        "categoryId": 1,
+        "categoryName": "Linens"
+      },
+      {
+        "categoryId": 2,
+        "categoryName": "Blankets"
+      },
+      {
+        "categoryId": 3,
+        "categoryName": "Bedding sets"
+      },
+      {
+        "categoryId": 4,
+        "categoryName": "Cushions"
+      },
+      {
+        "categoryId": 5,
+        "categoryName": "Blankets"
+      }
+    ]
+  },
+
+  {
+    "id": 7,
+    "name": "Storage and order",
+    "image": "/images/catalog/storage-orders-catalog.png",
+    "categories": [
+      {
+        "categoryId": 1,
+        "categoryName": "Storage accessories"
+      },
+      {
+        "categoryId": 2,
+        "categoryName": "Wall hooks and shelves"
+      },
+      {
+        "categoryId": 3,
+        "categoryName": "shoe racks, shelves with hooks for storage"
+      },
+      {
+        "categoryId": 4,
+        "categoryName": "Hangers, shoe racks, shelves with hooks for storage"
+      },
+      {
+        "categoryId": 5,
+        "categoryName": "Storage systems"
+      },
+      {
+        "categoryId": 6,
+        "categoryName": "Wardrobes and wardrobes"
+      }
+    ]
+  },
+
+  {
+    "id": 8,
+    "name": "Accessories",
+    "image": "/images/catalog/furniture-accessories-catalog.png",
+    "categories": [
+      {
+        "categoryId": 1,
+        "categoryName": "Wardrobes and wardrobes"
+      },
+      {
+        "categoryId": 2,
+        "categoryName": "Shelving and bookcases"
+      },
+      {
+        "categoryId": 3,
+        "categoryName": "Tables"
+      },
+      {
+        "categoryId": 4,
+        "categoryName": "Chairs"
+      },
+      {
+        "categoryId": 5,
+        "categoryName": "Beds"
+      }
+    ]
+  }
+]
