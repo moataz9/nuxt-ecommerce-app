@@ -1,9 +1,12 @@
 <template>
-  <div>
-    {{ catalogName() }}
-    {{ $route.name }} <br />
-    {{ $route.params.catalogId }}
-    {{ $route.params.categoryId }}
+  <div class="container-xxl">
+    <b-container fluid>
+      <b-row>
+        <b-col cols="12">
+          <AppNavigation :path="$route.path" />
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
