@@ -1,11 +1,16 @@
 <template>
-  <ul class="navigation" v-if="routes">
-    <li class="navigation-item" v-for="(route, index) of routes" :key="index">
-      <nuxt-link :to="route.routePath">
-        {{ route.itemName }}
-      </nuxt-link>
-    </li>
-  </ul>
+  <div>
+    <client-only>
+      <ul class="navigation" v-if="routes">
+        <li class="navigation-item" v-for="(route, index) of routes" :key="index">
+          <nuxt-link :to="route.routePath">
+            {{ route.itemName }}
+          </nuxt-link>
+        </li>
+      </ul>
+    </client-only>
+    <h2>{{ routes[routes.length - 1].itemName }}</h2>
+  </div>
 </template>
 
 <script>
