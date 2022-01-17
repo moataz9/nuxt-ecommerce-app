@@ -6,13 +6,23 @@
           <AppNavigation :path="$route.path" />
         </b-col>
       </b-row>
+      <b-row class="row-cols-xl-4">
+        <b-col v-for="wardrobe in wardrobes" :key="wardrobe.id">
+          <MainCategory :imagePath="wardrobe.image" :categoryName="wardrobe.name" />
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
 
 <script>
+import wardrobes from '@/data/wardrobes.json'
 export default {
-  methods: {},
+  data() {
+    return {
+      wardrobes,
+    }
+  },
 }
 </script>
 
