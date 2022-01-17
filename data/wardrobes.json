@@ -1,0 +1,32 @@
+[
+  {
+    "id": 3000,
+    "name": "Wardrobes and custom wardrobes",
+    "image": "/images/wardrobes/wardrobes.png"
+  },
+  {
+    "id": 3002,
+    "name": "Wardrobes",
+    "image": "/images/wardrobes/wardrobes-2.png"
+  },
+  {
+    "id": 3003,
+    "name": "Sliding wardrobes open wardrobes",
+    "image": "/images/wardrobes/sliding-wardrobes-2.png"
+  },
+  {
+    "id": 3004,
+    "name": "Hinged cabinets",
+    "image": "/images/wardrobes/hinged-cabinets.png"
+  },
+  {
+    "id": 3005,
+    "name": "Straight wardrobes",
+    "image": "/images/wardrobes/straight-wardrobes.png"
+  },
+  {
+    "id": 3006,
+    "name": "Corner cabinets",
+    "image": "/images/wardrobes/sliding-wardrobes.png"
+  }
+]

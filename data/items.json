@@ -8,7 +8,8 @@
       "currency": "$"
     },
     "discountPercentage": 12,
-    "image": "/images/discouts/vinter.png"
+    "image": "/images/discouts/vinter.png",
+    "popular": false
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
       "currency": "$"
     },
     "discountPercentage": 12,
-    "image": "/images/discouts/glasic.png"
+    "image": "/images/discouts/glasic.png",
+    "popular": false
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
       "currency": "$"
     },
     "discountPercentage": 12,
-    "image": "/images/discouts/stabbig.png"
+    "image": "/images/discouts/stabbig.png",
+    "popular": false
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
       "currency": "$"
     },
     "discountPercentage": 12,
-    "image": "/images/discouts/perlband.png"
+    "image": "/images/discouts/perlband.png",
+    "popular": false
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
       "currency": "$"
     },
     "discountPercentage": 0,
-    "image": "/images/categories/brimnes.png"
+    "image": "/images/categories/brimnes.png",
+    "popular": false
   },
   {
     "id": 6,
@@ -63,7 +68,8 @@
       "currency": "$"
     },
     "discountPercentage": 0,
-    "image": "/images/categories/decorera.png"
+    "image": "/images/categories/decorera.png",
+    "popular": false
   },
   {
     "id": 7,
@@ -74,7 +80,8 @@
       "currency": "$"
     },
     "discountPercentage": 12,
-    "image": "/images/categories/fulltalig.png"
+    "image": "/images/categories/fulltalig.png",
+    "popular": false
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@
       "currency": "$"
     },
     "discountPercentage": 0,
-    "image": "/images/categories/glisig.png"
+    "image": "/images/categories/glisig.png",
+    "popular": false
   },
   {
     "id": 9,
@@ -96,7 +104,8 @@
       "currency": "$"
     },
     "discountPercentage": 0,
-    "image": "/images/categories/kinnen.png"
+    "image": "/images/categories/kinnen.png",
+    "popular": false
   },
   {
     "id": 10,
@@ -107,7 +116,8 @@
       "currency": "$"
     },
     "discountPercentage": 33,
-    "image": "/images/categories/burrby.png"
+    "image": "/images/categories/burrby.png",
+    "popular": false
   },
   {
     "id": 11,
@@ -118,7 +128,8 @@
       "currency": "$"
     },
     "discountPercentage": 0,
-    "image": "/images/categories/skurup.png"
+    "image": "/images/categories/skurup.png",
+    "popular": false
   },
   {
     "id": 12,
@@ -129,7 +140,8 @@
       "currency": "$"
     },
     "discountPercentage": 0,
-    "image": "/images/categories/mossruta.png"
+    "image": "/images/categories/mossruta.png",
+    "popular": false
   },
   {
     "id": 13,
@@ -140,7 +152,8 @@
       "currency": "$"
     },
     "discountPercentage": 0,
-    "image": "/images/categories/winter-2.png"
+    "image": "/images/categories/winter-2.png",
+    "popular": false
   },
   {
     "id": 14,
@@ -151,7 +164,8 @@
       "currency": "$"
     },
     "discountPercentage": 0,
-    "image": "/images/categories/storage-orders.png"
+    "image": "/images/categories/storage-orders.png",
+    "popular": false
   },
   {
     "id": 15,
@@ -162,7 +176,8 @@
       "currency": "$"
     },
     "discountPercentage": 0,
-    "image": "/images/categories/stabbig-1.png"
+    "image": "/images/categories/stabbig-1.png",
+    "popular": false
   },
   {
     "id": 16,
@@ -173,6 +188,55 @@
       "currency": "$"
     },
     "discountPercentage": 0,
-    "image": "/images/categories/perland-2.png"
+    "image": "/images/categories/perland-2.png",
+    "popular": false
+  },
+  {
+    "id": 17,
+    "name": "VINTER 2020 VINTER 2020",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 5692.23,
+      "currency": "$"
+    },
+    "discountPercentage": 0,
+    "image": "static/images/categories/popular-1.png",
+    "popular": true
+  },
+  {
+    "id": 18,
+    "name": "GLASIG",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 2792.37,
+      "currency": "$"
+    },
+    "discountPercentage": 0,
+    "image": "static/images/categories/popular-2.png",
+    "popular": true
+  },
+  {
+    "id": 19,
+    "name": "STABBIG STABIG",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 763.23,
+      "currency": "$"
+    },
+    "discountPercentage": 16,
+    "image": "static/images/categories/popular-3.png",
+    "popular": true
+  },
+  {
+    "id": 20,
+    "name": "PÄRLBAND PÄRLBAND",
+    "description": "3-door wardrobe 117x190 cm",
+    "price": {
+      "priceValue": 235.42 ,
+      "currency": "$"
+    },
+    "discountPercentage": 0,
+    "image": "static/images/categories/popular-4.png",
+    "popular": true
   }
 ]
