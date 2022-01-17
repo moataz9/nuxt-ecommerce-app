@@ -1,7 +1,7 @@
 <template>
   <div class="app-shadow rounded-30 py-4 px-5 h-100">
     <div style="height: 150px">
-      <img class="category-img" :src="imagePath" :alt="categoryName" />
+      <b-img fluid :src="imagePath" :alt="categoryName" />
     </div>
     <h6 class="mb-0 mt-4">{{ categoryName }}</h6>
   </div>
@@ -21,9 +21,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.category-img {
-  width: 100%;
-}
-</style>
