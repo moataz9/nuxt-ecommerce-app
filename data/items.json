@@ -200,7 +200,7 @@
       "currency": "$"
     },
     "discountPercentage": 0,
-    "image": "static/images/categories/popular-1.png",
+    "image": "/images/categories/popular-1.png",
     "popular": true
   },
   {
@@ -212,7 +212,7 @@
       "currency": "$"
     },
     "discountPercentage": 0,
-    "image": "static/images/categories/popular-2.png",
+    "image": "/images/categories/popular-2.png",
     "popular": true
   },
   {
@@ -224,7 +224,7 @@
       "currency": "$"
     },
     "discountPercentage": 16,
-    "image": "static/images/categories/popular-3.png",
+    "image": "/images/categories/popular-3.png",
     "popular": true
   },
   {
@@ -236,7 +236,7 @@
       "currency": "$"
     },
     "discountPercentage": 0,
-    "image": "static/images/categories/popular-4.png",
+    "image": "/images/categories/popular-4.png",
     "popular": true
   }
 ]
