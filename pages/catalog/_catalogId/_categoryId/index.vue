@@ -7,8 +7,17 @@
         </b-col>
       </b-row>
       <b-row class="row-cols-xl-4">
-        <b-col v-for="wardrobe in wardrobes" :key="wardrobe.id">
-          <MainCategory :imagePath="wardrobe.image" :categoryName="wardrobe.name" />
+        <b-col v-for="wardrobe in wardrobes" :key="wardrobe.id" class="mb-4">
+          <nuxt-link :to="`${$route.path}/${wardrobe.id}`">
+          <!-- <nuxt-link :to="{
+            name: 'catalog-catalogId-categoryId-itemId'
+          }"></nuxt-link> -->
+            <MainCategory
+              :imagePath="wardrobe.image"
+              :categoryName="wardrobe.name"
+              :shadow="false"
+            />
+          </nuxt-link>
         </b-col>
       </b-row>
     </b-container>
