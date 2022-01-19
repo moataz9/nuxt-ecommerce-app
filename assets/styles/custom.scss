@@ -42,6 +42,9 @@ body {
 .app-color {
   color: $app-color;
 }
+.app-secondary-color {
+  color: $app-secondary-color;
+}
 a.app-color:hover {
   color: $app-color;
   // text-decoration: none;
