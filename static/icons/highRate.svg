@@ -1,0 +1,6 @@
+<svg width="20" height="22" viewBox="0 0 20 22" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <path d="M19 22C18.4477 22 18 21.5523 18 21L18 0.999992C18 0.447708 18.4477 -7.64896e-06 19 -7.67311e-06C19.5523 -7.69725e-06 20 0.447708 20 0.999992L20 21C20 21.5523 19.5523 22 19 22Z" fill="#5A5A5A"/>
+  <rect x="9" y="22" width="14.6667" height="2" rx="1" transform="rotate(-90 9 22)" fill="#5A5A5A"/>
+  <rect y="22" width="7.33334" height="2" rx="1" transform="rotate(-90 0 22)" fill="#5A5A5A"/>
+</svg>
