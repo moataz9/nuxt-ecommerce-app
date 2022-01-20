@@ -42,7 +42,7 @@
               </b-col>
             </b-row>
           </b-col>
-          <b-col class="border">
+          <b-col>
             <h4 class="font-weight-bold">{{ itemName }}</h4>
             <p>
               <span class="font-weight-bold">Art. {{ itemArt }}</span>
