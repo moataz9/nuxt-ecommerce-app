@@ -42,7 +42,7 @@
               </b-col>
             </b-row>
           </b-col>
-          <b-col class="border">
+          <b-col>
             <h4 class="font-weight-bold">{{ itemName }}</h4>
             <p>
               <span class="font-weight-bold">Art. {{ itemArt }}</span>
@@ -67,7 +67,7 @@
                 ><b-img src="/icons/highRate.svg"></b-img
               ></b-button>
             </b-btn-group>
-            <p class="my-5 app-secondary-color">{{ fullDescription }}</p>
+            <p class="mt-5 app-secondary-color">{{ fullDescription }}</p>
             <p class="border-top py-2">
               <span class="font-weight-bold">Color :</span> {{ itemColor }} &rightarrow;
             </p>
@@ -89,7 +89,7 @@
               :description="item.description"
               :price="item.price.priceValue"
               :discount="item.discount"
-              :currency="item.currency"
+              :currency="item.price.currency"
             />
           </b-col>
         </b-row>
