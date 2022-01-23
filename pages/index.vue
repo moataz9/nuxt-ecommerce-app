@@ -8,7 +8,7 @@
             <AppDescription />
           </b-col>
           <b-col cols="7">
-            <!-- <AppSlider /> -->
+            <AppSlider />
           </b-col>
         </b-row>
 
