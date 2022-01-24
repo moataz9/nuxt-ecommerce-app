@@ -12,18 +12,6 @@ body {
   color: #000;
 }
 
-.custom-form-control {
-  box-shadow: $app-shadow;
-  border-radius: 30px;
-  padding: 1.7rem;
-  border: none;
-  &:focus {
-    border-color: #eee;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(159, 183, 228, 0.25);
-  }
-}
-
 .app-shadow {
   box-shadow: $app-shadow;
 }
@@ -81,7 +69,7 @@ a.app-color:hover {
 
 a {
   color: #000;
-  transition: color .1s ease-in-out;
+  transition: color 0.1s ease-in-out;
   &:hover {
     text-decoration: none !important;
     color: $app-color;

@@ -5,6 +5,7 @@
     <b-container fluid class="d-flex justify-content-between align-items-center">
       <div>
         <img
+        class="humburger-icon"
           v-b-toggle.app-sidebar
           src="/icons/hamburger.svg"
           alt="humburger-icon"
@@ -28,7 +29,7 @@
         </nuxt-link>
       </div>
 
-      <ul class="icons mb-0">
+      <ul class="app-icons mb-0">
         <!-- popular products -->
         <li>
           <nuxt-link :to="{ name: 'popular' }">
@@ -70,10 +71,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-img {
+$app-shadow: inset 0px 0px 10px rgba(#000, 0.05);
+
+.humburger-icon {
   width: 30px;
 }
-.icons {
+.app-icons {
   padding-left: 0;
   li {
     display: inline-block;
@@ -110,6 +113,22 @@ img {
     img {
       max-width: 100%;
       margin-top: -6px;
+    }
+  }
+}
+.custom-form-control {
+  box-shadow: $app-shadow;
+  border-radius: 30px;
+  padding: 1.7rem;
+  border: none;
+  &:focus {
+    border-color: #eee;
+    outline: 0;
+    // box-shadow: 0 0 0 0.2rem rgba(159, 183, 228, 0.25);
+    background: linear-gradient(98.34deg, #ffffff 0%, #ffffff 100%);
+    box-shadow: inset 0px 0px 5px rgba(255, 153, 0, 0.3);
+    &::placeholder {
+      opacity: 0;
     }
   }
 }
