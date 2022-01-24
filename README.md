@@ -4,7 +4,7 @@ this porject build by moataz9
 
 ## live Preview
 
-for live preview on [netlify](https://reverent-allen-e3fb1b.netlify.app/)
+for live preview on [netlify](https://nuxt-ecommerce-e3fb1b.netlify.app/)
 
 ## Build Setup
 
