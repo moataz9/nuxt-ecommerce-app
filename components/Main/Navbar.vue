@@ -4,7 +4,7 @@
       <b-container fluid>
         <b-navbar-brand class="mr-0">
           <nuxt-link :to="{ name: 'index' }">
-            <b-img src="/images/logo.svg" />
+            <p class="h4 font-weight-bold text-uppercase">nuxt e-commerce</p>
           </nuxt-link>
         </b-navbar-brand>
 

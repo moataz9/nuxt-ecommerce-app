@@ -4,7 +4,7 @@
       <b-container fluid>
         <b-row class="pb-4">
           <b-col cols="12">
-            <b-img src="/images/logo.svg" alt="logo"></b-img>
+            <p class="h4 font-weight-bold text-uppercase">nuxt e-commerce</p>
           </b-col>
         </b-row>
         <b-row class="row-cols-1 row-cols-md-2 row-cols-xl-4">
@@ -13,11 +13,30 @@
             <div class="pr-5">
               <h4 class="footer-title">information</h4>
               <div class="footer-info">
-                <p>All rights reserved © 2015 online store AIKEA.BY Belarus.</p>
-                <address>
-                  UNP 191828159 IE Pareiko V.S., registration number in the
-                  commercial register 158299
-                </address>
+                <p>
+                  All rights reserved © 2022 online NUXT store by
+                  <a
+                    href="http://www.github.com/moataz9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-weight-bold"
+                  >
+                    moataz9
+                  </a>
+                </p>
+                <p>
+                  This e-commerce app build for
+                  <a
+                    href="http://www.github.com/moataz9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-weight-bold"
+                  >
+                    moataz9 profile
+                  </a>
+                  to get NUXT job <br />
+                  showing the potential clients moataz work
+                </p>
                 <p class="mt-4">Privacy Policy</p>
               </div>
             </div>
@@ -26,20 +45,13 @@
           <b-col>
             <div class="pr-5">
               <h4 class="footer-title">Menu</h4>
-              <ul
-                v-for="(linkArr, i) in footerLinks"
-                :key="i"
-                class="footer-links"
-              >
+              <ul v-for="(linkArr, i) in footerLinks" :key="i" class="footer-links">
                 <li
                   v-for="(linkInfo, index) in linkArr"
                   :key="index"
                   class="footer-links_link"
                 >
-                  <nuxt-link
-                    class="text-decoration-none"
-                    :to="{ name: linkInfo.routeName }"
-                  >
+                  <nuxt-link class="text-decoration-none" :to="{ name: linkInfo.routeName }">
                     {{ linkInfo.name }}
                   </nuxt-link>
                 </li>
@@ -51,16 +63,10 @@
             <h4 class="footer-title">Contacts</h4>
             <ul class="pl-0 list-unstyled footer-info">
               <li>
-                <address>
-                  Minsk <br />
-                  St. Pervomaiskaya, D. 1, Apt. 43
-                </address>
+                <address>Egypt</address>
               </li>
               <li>
-                <a href="tel:+"> + 375 434 847 28 84 </a>
-              </li>
-              <li>
-                <a href="tel:+"> + 375 448 473 09 48 </a>
+                <a href="tel:+201004791266" title="content moataz"> +20 100 479 1266 </a>
               </li>
               <li class="mt-5">
                 <a
@@ -75,9 +81,7 @@
           </b-col>
           <!--  -->
           <b-col>
-            <ul
-              class="list-unstyled pl-0 d-flex justify-content-end flex-column h-100"
-            >
+            <ul class="list-unstyled pl-0 d-flex justify-content-end flex-column h-100">
               <li class="my-3">
                 <b-img src="/images/social/instegram.png"></b-img>
               </li>

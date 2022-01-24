@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <img src="/images/image.jpg" alt="" /> -->
     <div class="container-xxl">
       <b-container fluid>
         <b-row>
@@ -23,16 +22,13 @@
           </b-col>
         </b-row>
 
-        <b-row class="row-cols-xl-5">
+        <b-row cols="2" cols-md="4" cols-xl="5">
           <b-col
             v-for="category in categories.slice(0, 10)"
             :key="category.id"
             class="text-center mt-4"
           >
-            <MainCategory
-              :imagePath="category.image"
-              :categoryName="category.name"
-            />
+            <MainCategory :imagePath="category.image" :categoryName="category.name" />
           </b-col>
         </b-row>
 
@@ -47,12 +43,8 @@
           </b-col>
         </b-row>
 
-        <b-row class="row-cols-4">
-          <b-col
-            v-for="item in items.slice(0, 12)"
-            :key="item.id"
-            class="mt-4"
-          >
+        <b-row cols="2" cols-md="4">
+          <b-col v-for="item in items.slice(0, 12)" :key="item.id" class="mt-4">
             <AppItem
               :imagePath="item.image"
               :itemName="item.name"
@@ -63,7 +55,6 @@
             />
           </b-col>
         </b-row>
-
       </b-container>
     </div>
   </div>

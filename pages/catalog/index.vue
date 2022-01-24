@@ -6,7 +6,7 @@
           <h1>catalog Page</h1>
         </b-col>
       </b-row>
-      <b-row class="row-cols-xl-4">
+      <b-row cols="2" cols-md="4">
         <b-col v-for="catalog in catalogs" :key="catalog.id">
           <div class="p-1">
             <b-img
