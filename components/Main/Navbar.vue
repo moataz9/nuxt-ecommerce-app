@@ -19,8 +19,9 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <div class="text-black call-request font-size-22">
-            + 20 102 456 7890 <span>/</span> + 20 102 456 7890
-            <p class="text-right mb-0">Request a call</p>
+            <a href="http://www.github.com/moataz9" target="_blank" rel="noopener noreferrer">
+              moataz9 github
+            </a>
           </div>
         </b-navbar-nav>
       </b-container>
