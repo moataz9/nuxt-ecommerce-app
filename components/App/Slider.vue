@@ -14,10 +14,9 @@
       @sliding-end="onSlideEnd"
     >
       <b-carousel-slide
-        v-for="(item, index) in 5"
+        v-for="(img, index) in images"
         :key="index"
-        :img-src="`https://picsum.photos/1024/480/?image=5${item}`"
-        :caption="`image ${item}`"
+        :img-src="img"
       ></b-carousel-slide>
     </b-carousel>
   </div>
@@ -25,6 +24,15 @@
 
 <script>
 export default {
+  props: {
+    images: {
+      type: Array,
+      required: true,
+      default: [
+        'https://via.placeholder.com/468x300.png/999/000/?text=The+slider+have+no+images',
+      ],
+    },
+  },
   data() {
     return {
       slide: 0,
@@ -73,7 +81,11 @@ img {
     opacity: 0;
   }
 }
-.carousel-indicators .active {
-  background-color: $app-color;
+.carousel-indicators {
+  margin-left: 55%;
+  margin-bottom: 2rem;
+  .active {
+    background-color: $app-color;
+  }
 }
 </style>

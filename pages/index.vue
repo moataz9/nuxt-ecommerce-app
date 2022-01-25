@@ -3,11 +3,9 @@
     <div class="container-xxl">
       <b-container fluid>
         <b-row>
-          <b-col cols="5">
-            <AppDescription />
-          </b-col>
-          <b-col cols="7">
-            <AppSlider />
+          <b-col class="appslider">
+            <AppDescription class="appslider-desc"/>
+            <AppSlider :images="sliderImages" class="appslider-slider"/>
           </b-col>
         </b-row>
 
@@ -70,9 +68,32 @@ export default {
     return {
       categories,
       items,
+      sliderImages: [
+        '/images/slider/kitchen-1.jpg',
+        '/images/slider/sofas-2.jpg',
+        '/images/slider/Storage-order.jpg',
+        '/images/slider/Storage-order-2.jpg',
+      ],
     }
   },
 }
 </script>
 
-<style></style>
+<style lang="scss">
+.appslider {
+  position: relative;
+  &-desc {
+    position: absolute;
+    color: white;
+    z-index: 100;
+    max-width: 45%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
+  &-slider {
+    height: 500px;
+    min-height: 500px;
+    max-height: 500px;
+  }
+}
+</style>

@@ -8,12 +8,15 @@
     </ul>
     <ul class="pl-0 mb-0 list-unstyled">
       <li>
-        <nuxt-link class="desc-link app-shadow el-bg-color text-white" :to="{ name: 'catalog' }">
+        <nuxt-link
+          class="desc-link app-shadow el-bg-color text-white"
+          :to="{ name: 'catalog' }"
+        >
           Go To Catalog
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link class="desc-link app-shadow app-color" :to="{ name: 'articals' }">
+        <nuxt-link class="desc-link app-shadow app-color bg-white" :to="{ name: 'articals' }">
           Enter article list
         </nuxt-link>
       </li>
@@ -43,6 +46,7 @@ ul.app-desc {
   li {
     position: relative;
     padding-left: 0.7rem;
+    color: white;
 
     &::before {
       content: '';
