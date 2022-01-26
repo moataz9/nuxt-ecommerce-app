@@ -1,11 +1,9 @@
 <template>
-  <div
-    class="container-xxl py-4"
-  >
+  <div class="container-xxl py-4">
     <b-container fluid class="d-flex justify-content-between align-items-center">
       <div>
         <img
-        class="humburger-icon"
+          class="humburger-icon"
           v-b-toggle.app-sidebar
           src="/icons/hamburger.svg"
           alt="humburger-icon"
