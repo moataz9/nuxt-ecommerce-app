@@ -1,14 +1,9 @@
 <template>
   <div>
+    <MainLanding :images="sliderImages" />
+
     <div class="container-xxl">
       <b-container fluid>
-        <b-row>
-          <b-col class="appslider">
-            <AppDescription class="appslider-desc"/>
-            <AppSlider :images="sliderImages" class="appslider-slider"/>
-          </b-col>
-        </b-row>
-
         <b-row class="mt-4">
           <b-col cols="12">
             <h2>
@@ -78,22 +73,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-.appslider {
-  position: relative;
-  &-desc {
-    position: absolute;
-    color: white;
-    z-index: 100;
-    max-width: 45%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-  }
-  &-slider {
-    height: 500px;
-    min-height: 500px;
-    max-height: 500px;
-  }
-}
-</style>
