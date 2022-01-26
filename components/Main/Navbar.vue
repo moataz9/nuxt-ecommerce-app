@@ -20,7 +20,7 @@
         <b-navbar-nav class="ml-auto">
           <div class="text-black call-request font-size-22">
             <a href="http://www.github.com/moataz9" target="_blank" rel="noopener noreferrer">
-              moataz9 github
+              github.com/moataz9
             </a>
           </div>
         </b-navbar-nav>

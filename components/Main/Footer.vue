@@ -21,7 +21,7 @@
                     rel="noopener noreferrer"
                     class="font-weight-bold"
                   >
-                    moataz9
+                    github.com/moataz9
                   </a>
                 </p>
                 <p>
@@ -32,7 +32,7 @@
                     rel="noopener noreferrer"
                     class="font-weight-bold"
                   >
-                    moataz9 profile
+                    moataz profile
                   </a>
                   to get NUXT job <br />
                   showing the potential clients moataz work
