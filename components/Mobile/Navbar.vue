@@ -1,6 +1,6 @@
 <template>
   <div class="mobile-navbar">
-    <b-container fluid class="mobile-navbar-container">
+    <div class="mobile-navbar-container">
       <b-button v-b-toggle.app-sidebar class="bg-transparent border-0 p-0 mt-n1">
         <b-img src="/icons/hamburger.svg" height="30" width="30"></b-img>
       </b-button>
@@ -12,7 +12,7 @@
       <b-button class="bg-transparent border-0 p-0">
         <b-img src="/icons/search.svg" height="30" width="30"></b-img>
       </b-button>
-    </b-container>
+    </div>
   </div>
 </template>
 
@@ -23,8 +23,9 @@ export default {}
 <style lang="scss" scoped>
 .mobile-navbar {
   background-color: #fff;
-  width: 100vw;
   height: 4.5rem;
+  padding: 0 1.5rem;
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 1000;
