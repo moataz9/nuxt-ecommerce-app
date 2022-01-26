@@ -150,10 +150,13 @@ img {
     padding-left: 0;
   }
   .appslider-desc {
-    min-width: 100vw !important;
-    max-width: 100vw !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
     padding-top: 6rem !important;
-    height: 40vh !important;
+    height: 60% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .appslider-slider {
     height: 65vh;
