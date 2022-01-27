@@ -53,16 +53,20 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
   data() {
     return {
       search: '',
-      cartCount: 100,
+      // cartCount: 100,
     }
+  },
+  computed: {
+    ...mapGetters('cart', ['getCartItemsCount']),
   },
   methods: {
     checkCartCount() {
-      return this.cartCount > 99 ? '99+' : this.cartCount
+      return this.getCartItemsCount > 99 ? '99+' : this.getCartItemsCount
     },
   },
 }

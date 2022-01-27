@@ -1,45 +1,49 @@
 <template>
   <div class="mobile-widgets">
-      <ul class="app-icons mobile-widgets-container mb-0">
-        <!-- insert shopping list -->
-        <li>
-          <nuxt-link class="app-color font-size-18" :to="{ name: 'index' }">
-            insert shopping list
-          </nuxt-link>
-        </li>
-        <!-- popular products -->
-        <li>
-          <nuxt-link :to="{ name: 'popular' }">
-            <img src="/icons/star.svg" alt="star" />
-          </nuxt-link>
-        </li>
-        <!-- in cart -->
-        <li class="cart">
-          <nuxt-link :to="{ name: 'cart' }">
-            <span class="cart-count app-color">{{ checkCartCount() }}</span>
-            <img src="/icons/cart.svg" alt="cart" />
-          </nuxt-link>
-        </li>
-        <!-- user login -->
-        <li>
-          <nuxt-link :to="{ name: 'login' }">
-            <img src="/icons/user.svg" alt="user" />
-          </nuxt-link>
-        </li>
-      </ul>
+    <ul class="app-icons mobile-widgets-container mb-0">
+      <!-- insert shopping list -->
+      <li>
+        <nuxt-link class="app-color font-size-18" :to="{ name: 'index' }">
+          insert shopping list
+        </nuxt-link>
+      </li>
+      <!-- popular products -->
+      <li>
+        <nuxt-link :to="{ name: 'popular' }">
+          <img src="/icons/star.svg" alt="star" />
+        </nuxt-link>
+      </li>
+      <!-- in cart -->
+      <li class="cart">
+        <nuxt-link :to="{ name: 'cart' }">
+          <span class="cart-count app-color">{{ checkCartCount() }}</span>
+          <img src="/icons/cart.svg" alt="cart" />
+        </nuxt-link>
+      </li>
+      <!-- user login -->
+      <li>
+        <nuxt-link :to="{ name: 'login' }">
+          <img src="/icons/user.svg" alt="user" />
+        </nuxt-link>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   data() {
     return {
-      cartCount: 100,
+      // cartCount: 100,
     }
+  },
+  computed: {
+    ...mapGetters('cart', ['getCartItemsCount']),
   },
   methods: {
     checkCartCount() {
-      return this.cartCount > 99 ? '99+' : this.cartCount
+      return this.getCartItemsCount > 99 ? '99+' : this.getCartItemsCount
     },
   },
 }
