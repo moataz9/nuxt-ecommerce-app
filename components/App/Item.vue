@@ -95,6 +95,9 @@ $app-color: #ff9900 !default;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 720px) {
+    box-shadow: $app-shadow;
+  }
   &:hover {
     box-shadow: $app-shadow;
     transition: all 0.3s ease-in-out;
@@ -146,13 +149,15 @@ $app-color: #ff9900 !default;
     // margin-top: -0.6rem;
     transform: translateY(155%);
     transition: transform 0.5s ease;
+    @media (max-width: 720px) {
+      transform: translateY(0);
+    }
     &_select {
       width: 5.11rem;
       border-radius: 30px;
       box-shadow: $app-shadow;
       border: none;
-      background: #fff url('/icons/arrow-down.svg') right 0.75rem center/10px
-        10px no-repeat;
+      background: #fff url('/icons/arrow-down.svg') right 0.75rem center/10px 10px no-repeat;
     }
     &_plus {
       width: 45px;
