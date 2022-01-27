@@ -22,15 +22,34 @@
     </div>
 
     <div class="item-cart px-4">
-      <b-form-select
-        v-model="selectedItem"
-        :options="options"
-        size="sm"
-        class="item-cart_select"
-      >
-      </b-form-select>
+      <div class="item-cart-count">
+        <img
+          style="cursor: pointer; user-select: none"
+          src="/icons/plus.svg"
+          @click="itemCount++"
+          draggable="false"
+        />
+        <!-- <span class="px-2 d-inline-block">{{ itemCount }}</span> -->
+        <input
+          class="text-center d-inline-block border-0"
+          style="width: 30px"
+          type="text"
+          :value="itemCount"
+        />
+        <img
+          style="cursor: pointer; user-select: none"
+          src="/icons/minus.svg"
+          @click="itemCount--"
+          draggable="false"
+        />
+      </div>
 
-      <b-button size="sm" variant="warning" class="item-cart_plus">
+      <b-button
+        size="sm"
+        variant="warning"
+        class="item-cart_plus"
+        @click="addItemToCart(itemId, itemCount)"
+      >
         <img src="/icons/cart-plus.svg" draggable="false" alt="" />
       </b-button>
     </div>
@@ -40,6 +59,9 @@
 <script>
 export default {
   props: {
+    itemId: {
+      required: true,
+    },
     imagePath: {
       type: String,
       required: true,
@@ -64,17 +86,23 @@ export default {
       type: String,
       required: true,
     },
+    // itemCount: {
+    //   type: Number,
+    //   required: false,
+    //   default: 1,
+    // },
   },
   data() {
     return {
       selectedItem: null,
-      options: [
-        { value: null, text: '1 pc', disabled: true },
-        { value: 2, text: '2 pc' },
-        { value: 3, text: '3 pc' },
-        { value: 4, text: '4 pc' },
-        { value: 5, text: '5 pc' },
-      ],
+      itemCount: 1
+      // options: [
+      //   { value: null, text: '1 pc', disabled: true },
+      //   { value: 2, text: '2 pc' },
+      //   { value: 3, text: '3 pc' },
+      //   { value: 4, text: '4 pc' },
+      //   { value: 5, text: '5 pc' },
+      // ],
     }
   },
   methods: {
@@ -82,6 +110,9 @@ export default {
       if (this.discount > 0 && this.discount < 100) {
         return this.price - this.price * (this.discount / 100)
       }
+    },
+    addItemToCart(id, count) {
+      this.$store.commit('cart/addItem', { id, count })
     },
   },
 }
@@ -151,13 +182,6 @@ $app-color: #ff9900 !default;
     transition: transform 0.5s ease;
     @media (max-width: 720px) {
       transform: translateY(0);
-    }
-    &_select {
-      width: 5.11rem;
-      border-radius: 30px;
-      box-shadow: $app-shadow;
-      border: none;
-      background: #fff url('/icons/arrow-down.svg') right 0.75rem center/10px 10px no-repeat;
     }
     &_plus {
       width: 45px;
