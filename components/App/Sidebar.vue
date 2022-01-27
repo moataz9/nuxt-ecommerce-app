@@ -12,7 +12,9 @@
     <div class="px-3 py-2">
       <ul class="list-unstyled">
         <li v-for="(link, index) in sidebarLinks" :key="index" class="mt-3">
-          <nuxt-link :to="link.route" class="h5 font-weight-bold">{{ link.route }}</nuxt-link>
+          <nuxt-link :to="{ name: link.route }" class="h5 font-weight-bold">
+            {{ link.route }}
+          </nuxt-link>
         </li>
       </ul>
     </div>
@@ -30,6 +32,7 @@ export default {
         { name: 'Popular', route: 'popular' },
         { name: 'Services', route: 'services' },
         { name: 'Login', route: 'login' },
+        { name: 'Cart', route: 'cart' },
       ],
     }
   },
