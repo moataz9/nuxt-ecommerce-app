@@ -82,13 +82,14 @@
           </b-col>
         </b-row>
         <b-row cols-xl="4">
-          <b-col v-for="(item, index) in popularItems()" :key="index">
+          <b-col v-for="(item, index) in getPopularItems" :key="index">
             <AppItem
+              :itemId="item.id"
               :imagePath="item.image"
               :itemName="item.name"
               :description="item.description"
-              :price="item.price.priceValue"
-              :discount="item.discount"
+              :price="parseFloat(item.price.priceValue)"
+              :discount="parseFloat(item.discountPercentage)"
               :currency="item.price.currency"
             />
           </b-col>
@@ -99,12 +100,11 @@
 </template>
 
 <script>
-import items from '@/data/items.json'
+import { mapGetters } from 'vuex'
 
 export default {
   data() {
     return {
-      items,
       itemName: 'VINTER 2020 VINTER 2020',
       itemArt: '890.321.44',
       lastOrderDate: '4/04/2022',
@@ -116,12 +116,8 @@ export default {
       itemColor: 'Black',
     }
   },
-  methods: {
-    popularItems() {
-      return this.items.filter(item => {
-        return item.popular === true
-      })
-    },
+  computed: {
+    ...mapGetters('items', ['getPopularItems']),
   },
 }
 </script>
