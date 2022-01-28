@@ -1,54 +1,61 @@
 <template>
-  <div class="item rounded-30 py-4 h-100">
-    <div class="item-img px-1">
+  <div
+    class="item rounded-30 py-4 h-100"
+    :class="{ 'horizontal border-bottom rounded-0': cartDesign }"
+  >
+    <div :class="`${cartDesign ? 'cart-design': ''} item-img px-1`">
       <img :src="imagePath" :alt="itemName" />
     </div>
 
-    <div class="item-info px-4">
-      <p v-if="discount" class="item-info_discount m-0">{{ discount }}%</p>
-      <br v-else />
-      <h5 class="item-info_name">{{ itemName }}</h5>
-      <h6 class="item-info_desc">{{ description }}</h6>
-    </div>
+    <section :class="{ 'w-75': cartDesign }">
+      <div class="item-info" :class="`${!cartDesign ? 'px-4' : ''}`">
+        <p v-if="discount" class="item-info_discount m-0">{{ discount }}%</p>
+        <br v-else />
+        <h5 class="item-info_name">{{ itemName }}</h5>
+        <h6 class="item-info_desc">{{ description }}</h6>
+      </div>
 
-    <div class="item-pricing px-4">
-      <p v-if="discount" class="item-pricing_old">
-        <s> {{ price.toFixed(2) }} {{ currency }} </s>
-      </p>
-      <!-- {{ price.toFixed(2) }} -->
-      <p class="item-pricing_new">
-        {{ discount ? newPrice().toFixed(2) : price.toFixed(2) }} {{ currency }}
-      </p>
-    </div>
+      <div class="item-pricing" :class="`${!cartDesign ? 'px-4' : ''}`">
+        <p v-if="discount" class="item-pricing_old">
+          <s> {{ price.toFixed(2) }} {{ currency }} </s>
+        </p>
+        <!-- {{ price.toFixed(2) }} -->
+        <p class="item-pricing_new">
+          {{ discount ? newPrice().toFixed(2) : price.toFixed(2) }} {{ currency }}
+        </p>
+      </div>
+    </section>
 
-    <div class="item-cart px-4">
+    <div class="item-cart" :class="{ 'cart-design': cartDesign, 'px-4': !cartDesign }">
       <div class="item-cart-count">
-        <img
-          style="cursor: pointer; user-select: none"
-          src="/icons/plus.svg"
-          @click="itemCount++"
-          draggable="false"
-        />
-        <!-- <span class="px-2 d-inline-block">{{ itemCount }}</span> -->
-        <input
-          class="text-center d-inline-block border-0"
-          style="width: 30px"
-          type="text"
-          :value="itemCount"
-        />
-        <img
-          style="cursor: pointer; user-select: none"
-          src="/icons/minus.svg"
-          @click="itemCount--"
-          draggable="false"
-        />
+        <div style="width: 5rem; text-align: right">
+          <img
+            style="cursor: pointer; user-select: none"
+            src="/icons/minus.svg"
+            @click="itemCount--"
+            v-show="itemCount > 1"
+            draggable="false"
+          />
+          <input
+            class="text-center d-inline-block border-0"
+            style="width: 30px"
+            type="text"
+            :value="itemCount"
+          />
+          <img
+            style="cursor: pointer; user-select: none"
+            src="/icons/plus.svg"
+            @click="itemCount++"
+            draggable="false"
+          />
+        </div>
       </div>
 
       <b-button
         size="sm"
         variant="warning"
-        class="item-cart_plus"
-        @click="addItemToCart(itemId, itemCount)"
+        class="item-cart_plus ml-auto"
+        @click="addItemToCart()"
       >
         <img src="/icons/cart-plus.svg" draggable="false" alt="" />
       </b-button>
@@ -86,6 +93,11 @@ export default {
       type: String,
       required: true,
     },
+    cartDesign: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     // itemCount: {
     //   type: Number,
     //   required: false,
@@ -94,15 +106,7 @@ export default {
   },
   data() {
     return {
-      selectedItem: null,
-      itemCount: 1
-      // options: [
-      //   { value: null, text: '1 pc', disabled: true },
-      //   { value: 2, text: '2 pc' },
-      //   { value: 3, text: '3 pc' },
-      //   { value: 4, text: '4 pc' },
-      //   { value: 5, text: '5 pc' },
-      // ],
+      itemCount: 1,
     }
   },
   methods: {
@@ -111,8 +115,17 @@ export default {
         return this.price - this.price * (this.discount / 100)
       }
     },
-    addItemToCart(id, count) {
-      this.$store.commit('cart/addItem', { id, count })
+    addItemToCart() {
+      this.$store.commit('cart/addItem', {
+        itemId: this.itemId,
+        imagePath: this.imagePath,
+        itemName: this.itemName,
+        description: this.description,
+        price: this.price,
+        discount: this.discount,
+        currency: this.currency,
+        itemCount: this.itemCount,
+      })
     },
   },
 }
@@ -126,10 +139,15 @@ $app-color: #ff9900 !default;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media (max-width: 720px) {
-    box-shadow: $app-shadow;
+  &.horizontal {
+    flex-direction: row;
   }
-  &:hover {
+  @media (max-width: 720px) {
+    &:not(.horizontal) {
+      box-shadow: $app-shadow;
+    }
+  }
+  &:not(.horizontal):hover {
     box-shadow: $app-shadow;
     transition: all 0.3s ease-in-out;
     .item-cart {
@@ -140,6 +158,10 @@ $app-color: #ff9900 !default;
     height: 300px;
     max-height: 300px;
     text-align: center;
+    &.cart-design {
+      max-height: 100%;
+      height: auto;
+    }
     img {
       width: 100%;
       max-height: 100%;
@@ -148,7 +170,6 @@ $app-color: #ff9900 !default;
   &-info {
     &_discount {
       color: red;
-      // font: 16px bold;
       font-weight: bold;
       margin-top: 0;
     }
@@ -169,7 +190,7 @@ $app-color: #ff9900 !default;
       color: #7d7d7d;
     }
     &_new {
-      font-size: 30px;
+      font-size: 1.6rem;
       font-weight: bold;
     }
   }
@@ -177,11 +198,20 @@ $app-color: #ff9900 !default;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    // margin-top: -0.6rem;
     transform: translateY(155%);
     transition: transform 0.5s ease;
+    &.cart-design {
+      flex-direction: column;
+      align-items: flex-start;
+      transform: translateY(0);
+    }
     @media (max-width: 720px) {
       transform: translateY(0);
+    }
+    input:focus {
+      box-shadow: $app-shadow;
+      outline: none;
+      border-radius: 10px;
     }
     &_plus {
       width: 45px;
