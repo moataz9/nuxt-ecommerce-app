@@ -6,7 +6,7 @@
           <AppNavigation :path="$route.path" />
         </b-col>
       </b-row>
-      <b-row class="row-cols-xl-4">
+      <b-row cols="2" cols-md="3" cols-xl="4">
         <b-col v-for="wardrobe in wardrobes" :key="wardrobe.id" class="mb-4">
           <nuxt-link :to="`${$route.path}/${wardrobe.id}`">
           <!-- <nuxt-link :to="{
