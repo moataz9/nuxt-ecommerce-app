@@ -1,5 +1,12 @@
 export default {
   addItem(state, item) {
-    state.cartItems.push(item)
+    let currnetItem = state.cartItems.find(customItem => {
+      return customItem.itemId == item.itemId
+    })
+    if (!currnetItem) {
+      state.cartItems.push(item)
+    } else {
+      currnetItem.itemCount = item.itemCount
+    }
   },
 }
