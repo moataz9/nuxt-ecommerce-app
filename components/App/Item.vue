@@ -3,7 +3,7 @@
     class="item rounded-30 py-4 h-100"
     :class="{ 'horizontal border-bottom rounded-0': cartDesign }"
   >
-    <div :class="`${cartDesign ? 'cart-design': ''} item-img px-1`">
+    <div :class="`${cartDesign ? 'cart-design' : ''} item-img px-1`">
       <img :src="imagePath" :alt="itemName" />
     </div>
 
@@ -40,7 +40,7 @@
             class="text-center d-inline-block border-0"
             style="width: 30px"
             type="text"
-            :value="itemCount"
+            v-model.number="itemCount"
           />
           <img
             style="cursor: pointer; user-select: none"
@@ -64,6 +64,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   props: {
     itemId: {
@@ -98,16 +100,17 @@ export default {
       required: false,
       default: false,
     },
-    // itemCount: {
-    //   type: Number,
-    //   required: false,
-    //   default: 1,
-    // },
   },
   data() {
     return {
       itemCount: 1,
     }
+  },
+  computed: {
+    ...mapGetters('cart', ['getSingleCartItemCount']),
+  },
+  mounted() {
+    this.itemCount = this.getSingleCartItemCount(this.itemId)
   },
   methods: {
     newPrice() {
@@ -198,7 +201,7 @@ $app-color: #ff9900 !default;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    transform: translateY(155%);
+    transform: translateY(156%);
     transition: transform 0.5s ease;
     &.cart-design {
       flex-direction: column;
