@@ -5,7 +5,7 @@
       <b-container fluid>
         <b-row cols="1" class="mt-4">
           <!-- main col one -->
-          <b-col lg="7" >
+          <b-col lg="7">
             <b-row cols="1">
               <b-col cols="12" class="d-flex justify-content-between pr-5">
                 <h2>cart Items</h2>
@@ -33,6 +33,11 @@
                 </p>
                 <b-img fluid src="/cart-empty.png" alt="no items in cart" class="mt-n5" />
               </b-col>
+            </b-row>
+            <b-row v-if="cartItems.length">
+              <h4 class="ml-auto py-4 mr-2">
+                <strong>Total Price:</strong> &nbsp; {{ getCartReceipt }} $
+              </h4>
             </b-row>
           </b-col>
           <!-- main col two -->
@@ -70,6 +75,7 @@ export default {
   },
   computed: {
     ...mapGetters('items', ['getPopularItems']),
+    ...mapGetters('cart', ['getCartReceipt']),
   },
 }
 </script>

@@ -11,4 +11,9 @@ export default {
     })
     return currentItem ? currentItem.itemCount : 0
   },
+  getCartReceipt(state) {
+    return state.cartItems.reduce((acc, curr) => {
+      return acc + curr.finalPrice
+    }, 0)
+  },
 }
