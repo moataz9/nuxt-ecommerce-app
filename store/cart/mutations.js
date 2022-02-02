@@ -7,6 +7,7 @@ export default {
       state.cartItems.push(item)
     } else {
       currnetItem.itemCount = item.itemCount
+      currnetItem.finalPrice = item.finalPrice
     }
   },
 }

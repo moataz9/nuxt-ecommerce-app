@@ -20,9 +20,7 @@
           <s> {{ price.toFixed(2) }} {{ currency }} </s>
         </p>
         <!-- {{ price.toFixed(2) }} -->
-        <p class="item-pricing_new">
-          {{ discount ? newPrice().toFixed(2) : price.toFixed(2) }} {{ currency }}
-        </p>
+        <p class="item-pricing_new">{{ actualPrice }} {{ currency }}</p>
       </div>
     </section>
 
@@ -110,6 +108,10 @@ export default {
   },
   computed: {
     ...mapGetters('cart', ['getSingleCartItemCount']),
+    actualPrice() {
+      let fPrice = this.discount ? this.newPrice() : this.price
+      return fPrice.toFixed(2)
+    },
   },
   mounted() {
     let singleItemCount = this.getSingleCartItemCount(this.itemId)
@@ -142,6 +144,7 @@ export default {
         discount: this.discount,
         currency: this.currency,
         itemCount: this.itemCount,
+        finalPrice: this.actualPrice * this.itemCount,
       })
       this.inCart = true
     },
@@ -237,7 +240,8 @@ $app-color: #ff9900 !default;
       border-radius: 50%;
       background-color: $app-color;
       border: none;
-      &:focus, &:active {
+      &:focus,
+      &:active {
         border: none;
       }
       img {
