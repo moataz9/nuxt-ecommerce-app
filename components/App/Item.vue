@@ -57,7 +57,8 @@
         class="item-cart_plus ml-auto"
         @click="addItemToCart()"
       >
-        <img src="/icons/cart-plus.svg" draggable="false" alt="" />
+        <img v-if="!inCart" src="/icons/cart-plus.svg" draggable="false" alt="" />
+        <img v-else src="/icons/check.svg" draggable="false" alt="" />
       </b-button>
     </div>
   </div>
@@ -103,14 +104,26 @@ export default {
   },
   data() {
     return {
-      itemCount: 1,
+      itemCount: null,
+      inCart: false,
     }
   },
   computed: {
     ...mapGetters('cart', ['getSingleCartItemCount']),
   },
   mounted() {
-    this.itemCount = this.getSingleCartItemCount(this.itemId)
+    let singleItemCount = this.getSingleCartItemCount(this.itemId)
+    this.itemCount = singleItemCount
+    if (singleItemCount) {
+      this.inCart = true
+    }
+  },
+  watch: {
+    itemCount(val) {
+      if (val !== this.getSingleCartItemCount(this.itemId)) {
+        this.inCart = false
+      }
+    },
   },
   methods: {
     newPrice() {
@@ -119,6 +132,7 @@ export default {
       }
     },
     addItemToCart() {
+      if (!this.itemCount) return
       this.$store.commit('cart/addItem', {
         itemId: this.itemId,
         imagePath: this.imagePath,
@@ -129,6 +143,7 @@ export default {
         currency: this.currency,
         itemCount: this.itemCount,
       })
+      this.inCart = true
     },
   },
 }
@@ -222,8 +237,11 @@ $app-color: #ff9900 !default;
       border-radius: 50%;
       background-color: $app-color;
       border: none;
+      &:focus, &:active {
+        border: none;
+      }
       img {
-        width: 110%;
+        width: 105%;
       }
     }
   }
